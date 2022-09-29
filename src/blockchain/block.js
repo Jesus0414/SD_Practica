@@ -15,7 +15,7 @@ class Block{
 
     static mine(previousBlock, data){
         const timestamp = Date.now();
-        const {hash: previousHash} = previousBlock;
+        const { hash: previousHash } = previousBlock;
         const hash = Block.hash(timestamp, previousHash, data);
 
         return new this(timestamp, previousHash, hash, data);
